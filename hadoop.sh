@@ -29,11 +29,11 @@ echo "export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true" >> hadoop-env.sh
 
 #get configuration files
 rm core-site.xml
-wget https://raw.github.com/okaram/scripts/master/hadoop/conf/core-site.xml
-rm mapred-site.xml
-wget https://raw.github.com/okaram/scripts/master/hadoop/conf/mapred-site.xml
+wget http://webprod11.megashares.com/index.php?d01=TZop5IS&lccdl=83a9555b6c9ec15c&d01go=1&fln=/core-site.xml
+rm mapred-site.xml.template
+wgethttp://webprod13.megashares.com/index.php?d01=xnu4Uvv&lccdl=83a9555b6c9ec15c&d01go=1&fln=/mapred-site.xml.template
 rm hdfs-site.xml
-wget https://raw.github.com/okaram/scripts/master/hadoop/conf/hdfs-site.xml
+wget http://webprod11.megashares.com/index.php?d01=9rbEHVP&lccdl=83a9555b6c9ec15c&d01go=1&fln=/hdfs-site.xml
 
 # chmod, symbolic links
 cd /usr/local
