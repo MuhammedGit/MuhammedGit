@@ -6,6 +6,7 @@ apt-get update
 apt-get -y install openjdk-7-jdk
 
 #download hadoop, untar, put in /usr/local
+cd ~
 cd /Downloads
 
 tar -xzf "$VERSION".tar.gz
