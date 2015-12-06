@@ -21,10 +21,11 @@ mkdir -p /app/hadoop/tmp
 chown hduser:hadoop /app/hadoop/tmp
 chmod 755 /app/hadoop/tmp
 
-mv $VERSION hadoop
+
 chown -R hduser:hadoop hadoop
 #modify hadoop-env
 cd /usr/local/hadoop/etc/hadoop
+mv $VERSION hadoop
 #echo "export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64" >> hadoop-env.sh
 echo "export JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> hadoop-env.sh
 echo "export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true" >> hadoop-env.sh#get configuration files
