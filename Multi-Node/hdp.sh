@@ -17,7 +17,8 @@ chmod 755 /app/hadoop/tmp
 
 #modify hadoop-env
 cd /usr/local/$VERSION/etc/hadoop
-echo "export JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> hadoop-env.sh
+echo "export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64" >> hadoop-env.sh
+#echo "export JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> hadoop-env.sh
 echo "export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true" >> hadoop-env.sh#get configuration files
 
 rm core-site.xml
