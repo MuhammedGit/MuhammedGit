@@ -33,3 +33,5 @@ wget https://raw.githubusercontent.com/MuhammedGit/MuhammedGit/Muho/Multi-Node/c
 mkdir -p /app/storm
 chown hduser:hadoop /app/storm
 chmod 755 /app/storm
+
+apt-get install python2.7
