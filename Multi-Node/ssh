@@ -1,0 +1,35 @@
+#!/bin/bash
+VERSIONzoo=zookeeper-3.4.6
+VERSIONsto=apache-storm-0.10.0
+su - hduser -c "echo | rm ~/.ssh/*"
+su - hduser -c "echo | ssh-keygen -t rsa -P \"\""
+cat /home/hduser/.ssh/id_rsa.pub >> /home/hduser/.ssh/authorized_keys
+su - hduser -c "ssh -o StrictHostKeyChecking=no localhost echo "
+wget http://ftp.itu.edu.tr/Mirror/Apache/zookeeper/stable/zookeeper-3.4.6.tar.gz
+cd ~/Desktop
+
+tar -xzf "$VERSIONzoo".tar.gz
+mv  $VERSIONzoo /usr/local
+cd /usr/local
+mv $VERSIONzoo zookeeper
+cd /usr/local/zookeeper/conf
+wget https://raw.githubusercontent.com/MuhammedGit/MuhammedGit/Muho/Multi-Node/conf/zoo.cfg
+mkdir -p /app/zookeeper/data
+mkdir -p /app/zookeeper/Logdata
+chown hduser:hadoop /app/zookeeper/data
+chmod 755 /app/zookeeper/data
+chown hduser:hadoop /app/zookeeper/Logdata
+chmod 755 /app/zookeeper/Logdata
+
+cd ~/Downloads
+wget http://ftp.itu.edu.tr/Mirror/Apache/storm/apache-storm-0.10.0/apache-storm-0.10.0.tar.gz
+tar -xzf "$VERSIONsto".tar.gz
+mv  $VERSIONsto /usr/local
+cd /usr/local
+mv $VERSIONsto storm
+cd /usr/local/storm/conf
+rm storm.yaml
+wget https://raw.githubusercontent.com/MuhammedGit/MuhammedGit/Muho/Multi-Node/conf/storm.yaml
+mkdir -p /app/storm
+chown hduser:hadoop /app/storm
+chmod 755 /app/storm
