@@ -1,0 +1,755 @@
+{
+	"name": "flare",
+	"children": [
+		{
+			"name": "2. Type of Paper - Contribution Facet",
+			"children": [
+				{"name": "Method / technique / Approach", "size": 35},
+				{"name": "Framework", "size": 11},
+				{"name": "Model", "size": 6},
+				{"name": "Tool", "size": 5},
+				{"name": "Architecture", "size": 4},
+				{"name": "Platform", "size": 5},
+				{"name": "Empirical (Case) study", "size": 3},
+				{"name": "Analaysis", "size": 10},
+				{"name": "Comparison", "size": 11},
+				{"name": "Overview", "size": 4},
+				{"name": "Other", "size": 7}
+			]
+		},
+		{
+			"name": "Is the evaluation based on Batch or stream processing ?",
+			"children": [
+				{"name": "Batch", "size": 28},
+				{"name": "Stream", "size": 48},
+				{"name": "Both", "size": 7},
+				{"name": "lack of experimentation", "size": 8}
+			]
+		},
+		{
+			"name": "3. Type of Paper - Research Facet",
+			"children": [
+				{"name": "1-Solution Proposal", "size": 20},
+				{"name": "2-Validation Research", "size": 39},
+				{"name": "3-Evaluation Research", "size": 31},
+				{"name": "Experience Papers", "size": 1}
+			]
+		},
+		{
+			"name": "4. What is/can be the data source used in this paper?",
+			"children": [
+				{"name": "Sensor data", "size": 4},
+				{"name": "Social Media data", "size": 16},
+				{"name": "Graphical data", "size": 7},
+				{"name": "Logs", "size": 6},
+				{"name": "Raw data", "size": 30},
+				{"name": "Generic", "size": 13},
+				{"name": "Other", "size": 20},
+				{"name": "None", "size": 8}
+			]
+		},
+		{
+			"name": "Which Streaming tool is used/examined in this paper?",
+			"children": [
+				{"name": "Spark", "size": 33},
+				{"name": "Storm", "size": 29},
+				{"name": "Flink/Stratosphere", "size": 18},
+				{"name": "IBM's InfoSphere", "size": 12},
+				{"name": "Apache S4", "size": 6}
+			]
+		},
+		{
+			"name": "Venues",
+			"children": [
+				{"name": "Conference", "size": 60},
+				{"name": "Journal", "size": 13},
+				{"name": "Symposium", "size": 6},
+				{"name": "Workshop", "size": 4},
+				{"name": "Thesis", "size": 2},
+				{"name": "Magazine", "size": 1},
+				{"name": "Book", "size": 1}
+			]
+		},
+		{
+			"name": "3. Whats the purpose of the contribution ? (Technique Framework, Model, Process, Architecture)",
+			"children": [
+				{"name": "Use-Case Enhancement", "size": 41},
+				{"name": "Performance Enhancement", "size": 21},
+				{"name": "Both", "size": 6},
+				{"name": "None", "size": 24}
+			]
+		},
+		{
+			"name": "What is the number of nodes (Computers/Servers) used in<br>experimentation (implementation) in this paper?",
+			"children": [
+				{"name": "1-5 nodes", "size": 28},
+				{"name": "5-20 nodes", "size": 26},
+				{"name": "20+ nodes", "size": 17}
+			]
+		},
+		{
+			"name":"Which Message Queue tool used in this paper?",
+			"children": [
+				{"name": "Kafka", "size": 8},
+				{"name": "RabbitMQ", "size": 2},
+				{"name": "ZeroMQ / 0MQ", "size": 9},
+				{"name": "Netwok Socket", "size": 6},
+				{"name": "HDFS", "size": 16},
+				{"name": "Others", "size": 3},
+				{"name": "Generic Socket", "size": 21},
+				{"name": "Not mentioned", "size": 20},
+				{"name": "Lack of experimentation", "size": 6}
+			]
+		},
+		{
+			"name": "Author affiliation",
+			"children": [
+				{"name": "Academic", "size": 61},
+				{"name": "Industrial", "size": 12},
+				{"name": "Colloboration", "size": 18}
+			]
+		},
+		{
+			"name": "Year",
+			"children": [
+				{"name": "2010", "size": 5},
+				{"name": "2011", "size": 1},
+				{"name": "2012", "size": 13},
+				{"name": "2013", "size": 16},
+				{"name": "2014", "size": 22},
+				{"name": "2015", "size": 34}
+			]
+		},
+		{
+			"name": "Venues",
+			"children": [
+				{"name": "BG", "size": 12},
+				{"name": "Big Data", "size": 6},
+				{"name": "DEBS", "size": 2},
+				{"name": "HotCloud", "size": 2},
+				{"name": "ICSESS", "size": 2},
+				{"name": "SIGMOD", "size": 7},
+				{"name": "VLDB", "size": 4}
+			]
+		},
+		{
+			"name": "CRQ 1) Contribution vs years",
+			"children": [
+				{
+					"name": "2010",
+					"children": [
+						{"name": "Method / Technique / Approach", "size": 3},
+						{"name": "Framework", "size": 1},
+						{"name": "Model", "size": 0},
+						{"name": "Tool", "size": 0},
+						{"name": "Architecture", "size": 0},
+						{"name": "Platform", "size": 1},
+						{"name": "Empirical (Case) study", "size": 0},
+						{"name": "Analysis", "size": 0},
+						{"name": "Comparison", "size": 0},
+						{"name": "Overview", "size": 0},
+						{"name": "Other", "size": 0}
+					]
+				},
+				{
+					"name": "2011",
+					"children": [
+						{"name": "Method / Technique / Approach", "size": 1},
+						{"name": "Framework", "size": 0},
+						{"name": "Model", "size": 0},
+						{"name": "Tool", "size": 0},
+						{"name": "Architecture", "size": 0},
+						{"name": "Platform", "size": 0},
+						{"name": "Empirical (Case) study", "size": 0},
+						{"name": "Analysis", "size": 0},
+						{"name": "Comparison", "size": 0},
+						{"name": "Overview", "size": 0},
+						{"name": "Other", "size": 0}
+					]
+				},
+				{
+					"name": "2012",
+					"children": [
+						{"name": "Method / Technique / Approach", "size": 6},
+						{"name": "Framework", "size": 1},
+						{"name": "Model", "size": 2},
+						{"name": "Tool", "size": 0},
+						{"name": "Architecture", "size": 0},
+						{"name": "Platform", "size": 0},
+						{"name": "Empirical (Case) study", "size": 1},
+						{"name": "Analysis", "size": 0},
+						{"name": "Comparison", "size": 1},
+						{"name": "Overview", "size": 1},
+						{"name": "Other", "size": 2}
+					]
+				},
+				{
+					"name": "2013",
+					"children": [
+						{"name": "Method / Technique / Approach", "size": 8},
+						{"name": "Framework", "size": 0},
+						{"name": "Model", "size": 1},
+						{"name": "Tool", "size": 1},
+						{"name": "Architecture", "size": 0},
+						{"name": "Platform", "size": 0},
+						{"name": "Empirical (Case) study", "size": 1},
+						{"name": "Analysis", "size": 3},
+						{"name": "Comparison", "size": 1},
+						{"name": "Overview", "size": 1},
+						{"name": "Other", "size": 1}
+					]
+				},
+				{
+					"name": "2014",
+					"children": [
+						{"name": "Method / Technique / Approach", "size": 9},
+						{"name": "Framework", "size": 2},
+						{"name": "Model", "size": 2},
+						{"name": "Tool", "size": 1},
+						{"name": "Architecture", "size": 1},
+						{"name": "Platform", "size": 1},
+						{"name": "Empirical (Case) study", "size": 0},
+						{"name": "Analysis", "size": 3},
+						{"name": "Comparison", "size": 5},
+						{"name": "Overview", "size": 2},
+						{"name": "Other", "size": 0}
+					]
+				},
+				{
+					"name": "2015",
+					"children": [
+						{"name": "Method / Technique / Approach", "size": 8},
+						{"name": "Framework", "size": 7},
+						{"name": "Model", "size": 1},
+						{"name": "Tool", "size": 3},
+						{"name": "Architecture", "size": 3},
+						{"name": "Platform", "size": 3},
+						{"name": "Empirical (Case) study", "size": 0},
+						{"name": "Analysis", "size": 4},
+						{"name": "Comparison", "size": 4},
+						{"name": "Overview", "size": 0},
+						{"name": "Other", "size": 4}
+					]
+				}
+			]
+		},
+		{
+			"name": "CRQ 2) Research facet vs years",
+			"children": [
+				{
+					"name": "2010",
+					"children": [
+						{"name": "Solution Proposal", "size": 1},
+						{"name": "Validation Research", "size": 3},
+						{"name": "Evaluation Research", "size": 1},
+						{"name": "Experience Papers", "size": 0}
+					]	
+				},
+				{
+					"name": "2011",
+					"children": [
+						{"name": "Solution Proposal", "size": 0},
+						{"name": "Validation Research", "size": 1},
+						{"name": "Evaluation Research", "size": 0},
+						{"name": "Experience Papers", "size": 0}
+					]	
+				},
+				{
+					"name": "2012",
+					"children": [
+						{"name": "Solution Proposal", "size": 1},
+						{"name": "Validation Research", "size": 4},
+						{"name": "Evaluation Research", "size": 7},
+						{"name": "Experience Papers", "size": 1}
+					]	
+				},
+				{
+					"name": "2013",
+					"children": [
+						{"name": "Solution Proposal", "size": 6},
+						{"name": "Validation Research", "size": 5},
+						{"name": "Evaluation Research", "size": 5},
+						{"name": "Experience Papers", "size": 0}
+					]	
+				},
+				{
+					"name": "2014",
+					"children": [
+						{"name": "Solution Proposal", "size": 8},
+						{"name": "Validation Research", "size": 8},
+						{"name": "Evaluation Research", "size": 6},
+						{"name": "Experience Papers", "size": 0}
+					]	
+				},
+				{
+					"name": "2015",
+					"children": [
+						{"name": "Solution Proposal", "size": 4},
+						{"name": "Validation Research", "size": 18},
+						{"name": "Evaluation Research", "size": 12},
+						{"name": "Experience Papers", "size": 0}
+					]	
+				}
+			]
+		},
+		{
+			"name": "RQ 3) Contribution vs Research",
+			"children": [
+				{
+					"name": "Solution Proposal",
+					"children": [
+						{"name": "Method / technique / Approach", "size": 12},
+						{"name": "Framework", "size": 2},
+						{"name": "Model", "size": 0},
+						{"name": "Tool", "size": 0},
+						{"name": "Architecture", "size": 0},
+						{"name": "Platform", "size": 1},
+						{"name": "Empirical (Case) study", "size": 0},
+						{"name": "Analysis", "size": 5},
+						{"name": "Comparison", "size": 0},
+						{"name": "Overview", "size": 2},
+						{"name": "Other", "size": 0}
+					]	
+				},
+				{
+					"name": "Validation Research",
+					"children": [
+						{"name": "Method / technique / Approach", "size": 10},
+						{"name": "Framework", "size": 5},
+						{"name": "Model", "size": 3},
+						{"name": "Tool", "size": 3},
+						{"name": "Architecture", "size": 2},
+						{"name": "Platform", "size": 3},
+						{"name": "Empirical (Case) study", "size": 1},
+						{"name": "Analysis", "size": 2},
+						{"name": "Comparison", "size": 6},
+						{"name": "Overview", "size": 0},
+						{"name": "Other", "size": 6}
+					]	
+				},
+				{
+					"name": "Evaluation Research",
+					"children": [
+						{"name": "Method / technique / Approach", "size": 13},
+						{"name": "Framework", "size": 4},
+						{"name": "Model", "size": 3},
+						{"name": "Tool", "size": 2},
+						{"name": "Architecture", "size": 2},
+						{"name": "Platform", "size": 1},
+						{"name": "Empirical (Case) study", "size": 1},
+						{"name": "Analysis", "size": 3},
+						{"name": "Comparison", "size": 5},
+						{"name": "Overview", "size": 2},
+						{"name": "Other", "size": 1}
+					]	
+				},
+				{
+					"name": "Experience Papers",
+					"children": [
+						{"name": "Method / technique / Approach", "size": 0},
+						{"name": "Framework", "size": 0},
+						{"name": "Model", "size": 0},
+						{"name": "Tool", "size": 0},
+						{"name": "Architecture", "size": 0},
+						{"name": "Platform", "size": 1},
+						{"name": "Empirical (Case) study", "size": 0},
+						{"name": "Analysis", "size": 0},
+						{"name": "Comparison", "size": 0},
+						{"name": "Overview", "size": 0},
+						{"name": "Other", "size": 0}
+					]	
+				}
+			]
+		},
+		{
+			"name": "CRQ 4) Years vs Frameworks",
+			"children": [
+				{
+					"name": "2010",
+					"children": [
+						{"name": "Spark", "size": 1},
+						{"name": "Storm", "size": 0},
+						{"name": "Flink/Stratosphere", "size": 0},
+						{"name": "IBM's InfoSphere", "size": 3},
+						{"name": "S4", "size": 1}
+					]	
+				},
+				{
+					"name": "2011",
+					"children": [
+						{"name": "Spark", "size": 0},
+						{"name": "Storm", "size": 0},
+						{"name": "Flink/Stratosphere", "size": 0},
+						{"name": "IBM's InfoSphere", "size": 0},
+						{"name": "S4", "size": 1}
+					]	
+				},
+				{
+					"name": "2012",
+					"children": [
+						{"name": "Spark", "size": 6},
+						{"name": "Storm", "size": 0},
+						{"name": "Flink/Stratosphere", "size": 4},
+						{"name": "IBM's InfoSphere", "size": 3},
+						{"name": "S4", "size": 1}
+					]	
+				},
+				{
+					"name": "2013",
+					"children": [
+						{"name": "Spark", "size": 2},
+						{"name": "Storm", "size": 7},
+						{"name": "Flink/Stratosphere", "size": 6},
+						{"name": "IBM's InfoSphere", "size": 1},
+						{"name": "S4", "size": 0}
+					]	
+				},
+				{
+					"name": "2014",
+					"children": [
+						{"name": "Spark", "size": 9},
+						{"name": "Storm", "size": 9},
+					{"name": "Flink/Stratosphere", "size": 3},
+						{"name": "IBM's InfoSphere", "size": 4},
+						{"name": "S4", "size": 1}
+					]	
+				},
+				{
+					"name": "2015",
+					"children": [
+						{"name": "Spark", "size": 15},
+						{"name": "Storm", "size": 13},
+						{"name": "Flink/Stratosphere", "size": 5},
+						{"name": "IBM's InfoSphere", "size": 1},
+						{"name": "S4", "size": 2}
+					]
+				}
+			]	
+		},
+		{
+			"name": "CRQ 5) Experiment type vs Frameworks",
+			"children": [
+				{
+					"name": "Batch",
+					"children": [
+						{"name": "Spark", "size": 16},
+						{"name": "Storm", "size": 0},
+						{"name": "Flink/Stratosphere", "size": 13},
+						{"name": "IBM's InfoSphere", "size": 1},
+						{"name": "S4", "size": 0}
+					]	
+				},
+				{
+					"name": "Streaming",
+					"children": [
+						{"name": "Spark", "size": 13},
+						{"name": "Storm", "size": 22},
+						{"name": "Flink/Stratosphere", "size": 2},
+						{"name": "IBM's InfoSphere", "size": 9},
+						{"name": "S4", "size": 5}
+					]	
+				},
+				{
+					"name": "Both",
+					"children": [
+						{"name": "Spark", "size": 3},
+						{"name": "Storm", "size": 4},
+						{"name": "Flink/Stratosphere", "size": 1},
+						{"name": "IBM's InfoSphere", "size": 0},
+						{"name": "S4", "size": 1}
+					]	
+				},
+				{
+					"name": "Lack of evaluation",
+					"children": [
+						{"name": "Spark", "size": 1},
+						{"name": "Storm", "size": 3},
+						{"name": "Flink/Stratosphere", "size": 2},
+						{"name": "IBM's InfoSphere", "size": 2},
+						{"name": "S4", "size": 0}
+					]
+				}
+			]	
+		},
+		{
+			"name": "CRQ 6) Frameworks vs purpose of contribution",
+			"children": [
+				{
+					"name": "Usage Enhancement",
+					"children": [
+						{"name": "Spark", "size": 12},
+						{"name": "Storm", "size": 12},
+						{"name": "Flink/Stratosphere", "size": 8},
+						{"name": "IBM's InfoSphere", "size": 9},
+						{"name": "S4", "size": 1}
+					]	
+				},
+				{
+					"name": "Performance Enhancement",
+					"children": [
+						{"name": "Spark", "size": 7},
+						{"name": "Storm", "size": 8},
+						{"name": "Flink/Stratosphere", "size": 6},
+						{"name": "IBM's InfoSphere", "size": 0},
+						{"name": "S4", "size": 1}
+					]	
+				},
+				{
+					"name": "Both",
+					"children": [
+						{"name": "Spark", "size": 2},
+						{"name": "Storm", "size": 2},
+						{"name": "Flink/Stratosphere", "size": 1},
+						{"name": "IBM's InfoSphere", "size": 1},
+						{"name": "S4", "size": 0}
+					]	
+				},
+				{
+					"name": "None",
+					"children": [
+						{"name": "Spark", "size": 13},
+						{"name": "Storm", "size": 7},
+						{"name": "Flink/Stratosphere", "size": 4},
+						{"name": "IBM's InfoSphere", "size": 2},
+						{"name": "S4", "size": 4}
+					]
+				}
+			]	
+		},
+		{
+			"name": "CRQ 7) Framework vs data ingestion (streamwise)",
+			"children": [
+				{
+					"name": "Kafka",
+					"children": [
+						{"name": "Spark", "size": 4},
+						{"name": "Storm", "size": 4},
+						{"name": "Flink/Stratosphere", "size": 1},
+						{"name": "IBM's InfoSphere", "size": 0},
+						{"name": "S4", "size": 0}
+					]	
+				},
+				{
+					"name": "RabbitMQ",
+					"children": [
+						{"name": "Spark", "size": 0},
+						{"name": "Storm", "size": 2},
+						{"name": "Flink/Stratosphere", "size": 0},
+						{"name": "IBM's InfoSphere", "size": 0},
+						{"name": "S4", "size": 0}
+					]	
+				},
+				{
+					"name": "ZeroMQ/0MQ",
+					"children": [
+						{"name": "Spark", "size": 3},
+						{"name": "Storm", "size": 4},
+						{"name": "Flink/Stratosphere", "size": 0},
+						{"name": "IBM's InfoSphere", "size": 1},
+						{"name": "S4", "size": 0}
+					]	
+				},
+				{
+					"name": "Network Socket",
+					"children": [
+						{"name": "Spark", "size": 1},
+						{"name": "Storm", "size": 1},
+						{"name": "Flink/Stratosphere", "size": 0},
+						{"name": "IBM's InfoSphere", "size": 3},
+						{"name": "S4", "size": 0}
+					]	
+				},
+				{
+					"name": "Twitter Streaming API",
+					"children": [
+						{"name": "Spark", "size": 1},
+						{"name": "Storm", "size": 2},
+						{"name": "Flink/Stratosphere", "size": 0},
+						{"name": "IBM's InfoSphere", "size": 0},
+						{"name": "S4", "size": 0}
+					]	
+				},
+				{
+					"name": "Kestrel",
+					"children": [
+						{"name": "Spark", "size": 0},
+						{"name": "Storm", "size": 2},
+						{"name": "Flink/Stratosphere", "size": 0},
+						{"name": "IBM's InfoSphere", "size": 0},
+						{"name": "S4", "size": 0}
+					]	
+				},
+				{
+					"name": "HDFS",
+					"children": [
+						{"name": "Spark", "size": 2},
+						{"name": "Storm", "size": 0},
+						{"name": "Flink/Stratosphere", "size": 0},
+						{"name": "IBM's InfoSphere", "size": 0},
+						{"name": "S4", "size": 0}
+					]	
+				},
+				{
+					"name": "Others",
+					"children": [
+						{"name": "Spark", "size": 0},
+						{"name": "Storm", "size": 3},
+						{"name": "Flink/Stratosphere", "size": 0},
+						{"name": "IBM's InfoSphere", "size": 0},
+						{"name": "S4", "size": 0}
+					]	
+				},
+				{
+					"name": "Generic",
+					"children": [
+						{"name": "Spark", "size": 3},
+						{"name": "Storm", "size": 10},
+						{"name": "Flink/Stratosphere", "size": 1},
+						{"name": "IBM's InfoSphere", "size": 4},
+						{"name": "S4", "size": 4}
+					]	
+				},
+				{
+					"name": "Not mentioned",
+					"children": [
+						{"name": "Spark", "size": 3},
+						{"name": "Storm", "size": 2},
+						{"name": "Flink/Stratosphere", "size": 1},
+						{"name": "IBM's InfoSphere", "size": 2},
+						{"name": "S4", "size": 2}
+					]	
+				},
+				{
+					"name": "Lack of evaluation",
+					"children": [
+						{"name": "Spark", "size": 0},
+						{"name": "Storm", "size": 0},
+						{"name": "Flink/Stratosphere", "size": 0},
+						{"name": "IBM's InfoSphere", "size": 0},
+						{"name": "S4", "size": 0}
+					]
+				}
+			]	
+		},
+		{
+			"name": "CRQ 8) Each framework vs data (types) used",
+			"children": [
+				{
+					"name": "Sensor data",
+					"children": [
+						{"name": "Spark", "size": 1},
+						{"name": "Storm", "size": 1},
+						{"name": "Flink/Stratosphere", "size": 0},
+						{"name": "IBM's InfoSphere", "size": 1},
+						{"name": "S4", "size": 1}
+					]	
+				},
+				{
+					"name": "Social Media data",
+					"children": [
+						{"name": "Spark", "size": 5},
+						{"name": "Storm", "size": 8},
+						{"name": "Flink/Stratosphere", "size": 3},
+						{"name": "IBM's InfoSphere", "size": 0},
+						{"name": "S4", "size": 0}
+					]	
+				},
+				{
+					"name": "Graphical Data",
+					"children": [
+						{"name": "Spark", "size": 3},
+						{"name": "Storm", "size": 2},
+						{"name": "Flink/Stratosphere", "size": 3},
+						{"name": "IBM's InfoSphere", "size": 0},
+						{"name": "S4", "size": 0}
+					]	
+				},
+				{
+					"name": "Geospatial data",
+					"children": [
+						{"name": "Spark", "size": 4},
+						{"name": "Storm", "size": 1},
+						{"name": "Flink/Stratosphere", "size": 0},
+						{"name": "IBM's InfoSphere", "size": 1},
+						{"name": "S4", "size": 1}
+					]	
+				},
+				{
+					"name": "Log data",
+					"children": [
+						{"name": "Spark", "size": 2},
+						{"name": "Storm", "size": 3},
+						{"name": "Flink/Stratosphere", "size": 1},
+						{"name": "IBM's InfoSphere", "size": 0},
+						{"name": "S4", "size": 1}
+					]	
+				},
+				{
+					"name": "Raw data",
+					"children": [
+						{"name": "Spark", "size": 15},
+						{"name": "Storm", "size": 6},
+						{"name": "Flink/Stratosphere", "size": 7},
+						{"name": "IBM's InfoSphere", "size": 3},
+						{"name": "S4", "size": 2}
+					]	
+				},
+				{
+					"name": "Generic",
+					"children": [
+						{"name": "Spark", "size": 5},
+						{"name": "Storm", "size": 3},
+						{"name": "Flink/Stratosphere", "size": 4},
+						{"name": "IBM's InfoSphere", "size": 2},
+						{"name": "S4", "size": 0}
+					]	
+				},
+				{
+					"name": "Other",
+					"children": [
+						{"name": "Spark", "size": 8},
+						{"name": "Storm", "size": 8},
+						{"name": "Flink/Stratosphere", "size": 2},
+						{"name": "IBM's InfoSphere", "size": 3},
+						{"name": "S4", "size": 3}
+					]
+				}
+			]	
+		},
+		{
+			"name": "9) CRQ: Each framework vs number of nodes",
+			"children": [
+				{
+					"name": " 1-5 nodes",
+					"children": [
+						{"name": "Spark", "size": 10},
+						{"name": "Storm", "size": 12},
+						{"name": "Flink/Stratosphere", "size": 6},
+						{"name": "IBM's InfoSphere", "size": 2},
+						{"name": "S4", "size": 2}
+					]	
+				},
+				{
+					"name": "5-20 nodes",
+					"children": [
+						{"name": "Spark", "size": 12},
+						{"name": "Storm", "size": 7},
+						{"name": "Flink/Stratosphere", "size": 6},
+						{"name": "IBM's InfoSphere", "size": 3},
+						{"name": "S4", "size": 1}
+					]	
+				},
+				{
+					"name": "20+ nodes",
+					"children": [
+						{"name": "Spark", "size": 9},
+						{"name": "Storm", "size": 2},
+						{"name": "Flink/Stratosphere", "size": 3},
+						{"name": "IBM's InfoSphere", "size": 0},
+						{"name": "S4", "size": 3}
+					]
+				}
+			]	
+		}
+	]
+}
