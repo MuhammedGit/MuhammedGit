@@ -5,7 +5,7 @@ cd ~/Downloads
 
 
 tar -xzf "$VERSION".tar.gz
-mv  $VERSION /usr/local/big
+mv  $VERSION /usr/local/big/hadoop
 
 
 
