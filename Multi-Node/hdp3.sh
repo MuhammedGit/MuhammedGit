@@ -4,9 +4,10 @@ VERSION=hadoop-2.7.2
 cd ~/Downloads
 
 
-tar -xzf "$VERSION".tar.gz
-cd ~/usr/local/
+
+cd /usr/local/
 mkdir big
+cd ~/Downloads
 mv  $VERSION /usr/local/big/
 
 
