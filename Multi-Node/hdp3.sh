@@ -8,7 +8,7 @@ cd ~/Downloads
 cd /usr/local/
 mkdir big
 cd ~/Downloads
-mv  $VERSION /usr/local/big/
+mv  hadoop /usr/local/big/
 
 
 
@@ -16,8 +16,8 @@ mkdir -p /app1/hadoop/tmp
 
 chmod 755 /app1/hadoop/tmp
 
-cd /usr/local/big
-mv $VERSION hadoop
+
+
 
 #modify hadoop-env
 cd /usr/local/big/hadoop/etc/hadoop
