@@ -24,3 +24,8 @@ chmod a+x stream-bench.sh
 cp -r /usr/local/hadoop/ ./
 chown -R se:se /usr/local/BDM
 ./stream-bench.sh SETUP
+
+
+mkdir /app/zookeeper
+mkdir /app/kafka-logs
+chown -R se:se /app
