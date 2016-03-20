@@ -41,7 +41,7 @@ rm localConf.yaml
 wget https://raw.githubusercontent.com/MuhammedGit/MuhammedGithub/Muho/Benchmark/conf/local/localConf.yaml
 cd /usr/local/BDM/zookeeper-3.4.8/conf/
 wget https://raw.githubusercontent.com/MuhammedGit/MuhammedGithub/Muho/Benchmark/conf/zookeeper/zoo.cfg
-
+chown -R se:se /usr/local/BDM
 mkdir /app/zookeeper
 mkdir /app/kafka-logs
 chown -R se:se /app
