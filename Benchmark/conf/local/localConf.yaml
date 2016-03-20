@@ -1,0 +1,16 @@
+kafka.brokers:
+    - "172.16.231.20"
+
+zookeeper.servers:
+    - "172.16.231.20,172.16.231.22"
+
+kafka.port: 9092
+zookeeper.port: 2181
+redis.host: "172.16.231.20"
+kafka.topic: "ad-events"
+kafka.partitions: 2
+process.hosts: 1
+process.cores: 4
+storm.workers: 7
+storm.ackers: 1
+spark.batchtime: 2000
