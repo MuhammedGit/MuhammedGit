@@ -33,7 +33,7 @@ ZK_PORT="2181"
 ZK_CONNECTIONS="$ZK_HOST:$ZK_PORT"
 TOPIC=${TOPIC:-"ad-events"}
 PARTITIONS=${PARTITIONS:-1}
-LOAD=${LOAD:-100}
+LOAD=${LOAD:-1000}
 CONF_FILE=./conf/localConf.yaml
 TEST_TIME=${TEST_TIME:-240}
 
@@ -114,7 +114,54 @@ create_kafka_topic() {
 
 run() {
   OPERATION=$1
-  if [ "START_ZK" = "$OPERATION" ];
+  if [ "SETUP" = "$OPERATION" ];
+  then
+  
+
+    echo 'kafka.brokers:' > $CONF_FILE
+    echo '    - "localhost"' >> $CONF_FILE
+    echo >> $CONF_FILE
+    echo 'zookeeper.servers:' >> $CONF_FILE
+    echo '    - "'$ZK_HOST'"' >> $CONF_FILE
+    echo >> $CONF_FILE
+    echo 'kafka.port: 9092' >> $CONF_FILE
+	echo 'zookeeper.port: '$ZK_PORT >> $CONF_FILE
+	echo 'redis.host: "localhost"' >> $CONF_FILE
+	echo 'kafka.topic: "'$TOPIC'"' >> $CONF_FILE
+	echo 'kafka.partitions: '$PARTITIONS >> $CONF_FILE
+	echo 'process.hosts: 1' >> $CONF_FILE
+	echo 'process.cores: 4' >> $CONF_FILE
+	echo 'storm.workers: 1' >> $CONF_FILE
+	echo 'storm.ackers: 2' >> $CONF_FILE
+	echo 'spark.batchtime: 2000' >> $CONF_FILE
+	
+    $MVN clean install -Dspark.version="$SPARK_VERSION" -Dkafka.version="$KAFKA_VERSION" -Dflink.version="$FLINK_VERSION" -Dstorm.version="$STORM_VERSION" -Dscala.binary.version="$SCALA_BIN_VERSION" -Dscala.version="$SCALA_BIN_VERSION.$SCALA_SUB_VERSION"
+
+    #Fetch and build Redis
+    REDIS_FILE="$REDIS_DIR.tar.gz"
+    fetch_untar_file "$REDIS_FILE" "http://download.redis.io/releases/$REDIS_FILE"
+
+    cd $REDIS_DIR
+    $MAKE
+    cd ..
+
+    #Fetch Kafka
+    KAFKA_FILE="$KAFKA_DIR.tgz"
+    fetch_untar_file "$KAFKA_FILE" "$APACHE_MIRROR/kafka/$KAFKA_VERSION/$KAFKA_FILE"
+
+    #Fetch Storm
+    STORM_FILE="$STORM_DIR.tar.gz"
+    fetch_untar_file "$STORM_FILE" "$APACHE_MIRROR/storm/$STORM_DIR/$STORM_FILE"
+
+    #Fetch Flink
+    FLINK_FILE="$FLINK_DIR-bin-hadoop27-scala_${SCALA_BIN_VERSION}.tgz"
+    fetch_untar_file "$FLINK_FILE" "$APACHE_MIRROR/flink/flink-$FLINK_VERSION/$FLINK_FILE"
+
+    #Fetch Spark
+    SPARK_FILE="$SPARK_DIR.tgz"
+    fetch_untar_file "$SPARK_FILE" "$APACHE_MIRROR/spark/spark-$SPARK_VERSION/$SPARK_FILE"
+
+  elif [ "START_ZK" = "$OPERATION" ];
   then
     start_if_needed dev_zookeeper ZooKeeper 10 "$STORM_DIR/bin/storm" dev-zookeeper
   elif [ "STOP_ZK" = "$OPERATION" ];
@@ -137,11 +184,6 @@ run() {
     start_if_needed daemon.name=supervisor "Storm Supervisor" 3 "$STORM_DIR/bin/storm" supervisor
     start_if_needed daemon.name=ui "Storm UI" 3 "$STORM_DIR/bin/storm" ui
     start_if_needed daemon.name=logviewer "Storm LogViewer" 3 "$STORM_DIR/bin/storm" logviewer
-ssh muho@slave2 <<'ENDSSH' &
-echo | /usr/local/big/apache-storm-0.10.0/bin/storm supervisor &
-echo | /usr/local/big/apache-storm-0.10.0/bin/storm logviewer &
-ENDSSH
-    sleep 20
   elif [ "STOP_STORM" = "$OPERATION" ];
   then
     stop_if_needed daemon.name=nimbus "Storm Nimbus"
@@ -163,8 +205,9 @@ ENDSSH
 	#"$FLINK_DIR/bin/flink" run -m yarn-cluster -yn 3 ./flink-benchmarks/target/flink-benchmarks-0.1.0.jar --confPath $CONF_FILE &
 	##sleep 100 ##
 	#$FLINK_DIR/bin/yarn-session.sh -n 2
-	
-#sleep 85
+	#$FLINK_DIR/bin/yarn-session.sh -n 5 -d 
+	#sleep 45
+
 echo flink basladi -----------------
   elif [ "STOP_FLINK" = "$OPERATION" ];
   then
@@ -181,7 +224,7 @@ echo flink basladi -----------------
     ##start_if_needed org.apache.spark.deploy.master.Master SparkMaster 5 $SPARK_DIR/sbin/start-master.sh -h localhost -p 7077
     ##start_if_needed org.apache.spark.deploy.worker.Worker SparkSlave 5 $SPARK_DIR/sbin/start-slave.sh spark://localhost:7077
 	"$SPARK_DIR/bin/spark-submit" --master yarn  --class spark.benchmark.KafkaRedisAdvertisingStream ./spark-benchmarks/target/spark-benchmarks-0.1.0.jar "$CONF_FILE" &
-	sleep 50	
+	sleep 5	
 	echo spark basladi -------------------
       elif [ "STOP_SPARK" = "$OPERATION" ];
   then
@@ -218,9 +261,9 @@ echo flink basladi -----------------
   then
     #"$FLINK_DIR/bin/flink" run ./flink-benchmarks/target/flink-benchmarks-0.1.0.jar --confPath $CONF_FILE &
 	#"$FLINK_DIR/bin/flink" run  ./flink-benchmarks/target/flink-benchmarks-0.1.0.jar --confPath $CONF_FILE &
-	"$FLINK_DIR/bin/flink" run -m yarn-cluster -yn 2 ./flink-benchmarks/target/flink-benchmarks-0.1.0.jar --confPath $CONF_FILE &
+	"$FLINK_DIR/bin/flink" run ./flink-benchmarks/target/flink-benchmarks-0.1.0.jar  --confPath $CONF_FILE &
 echo flink basladi
-    sleep 60
+    #sleep 60
   elif [ "STOP_FLINK_PROCESSING" = "$OPERATION" ];
   then
     FLINK_ID=`"$FLINK_DIR/bin/flink" list | grep 'Flink Streaming Job' | awk '{print $4}'; true`
@@ -237,7 +280,7 @@ echo flink basladi
     run "START_REDIS"
     run "START_KAFKA"
     #run "START_STORM"
-sleep 5
+#sleep 5
     run "START_STORM_TOPOLOGY"
     run "START_LOAD"
     sleep $TEST_TIME
@@ -252,15 +295,15 @@ sleep 5
   then
     #run "START_ZK"
     run "START_REDIS"
-    run "START_KAFKA"
-    run "START_FLINK"
+    #run "START_FLINK"
+	run "START_KAFKA"
     run "START_FLINK_PROCESSING"
     run "START_LOAD"
     sleep $TEST_TIME
 	echo tttest bitti ----------------
     run "STOP_LOAD"
     run "STOP_FLINK_PROCESSING"
-    run "STOP_FLINK"
+    #run "STOP_FLINK"
     run "STOP_KAFKA"
     run "STOP_REDIS"
     #run "STOP_ZK"
@@ -268,7 +311,7 @@ sleep 5
   then
     run "STOP_LOAD"
     run "STOP_FLINK_PROCESSING"
-    run "STOP_FLINK"
+    #run "STOP_FLINK"
     run "STOP_KAFKA"
     run "STOP_REDIS"
   elif [ "SPARK_TEST" = "$OPERATION" ];
