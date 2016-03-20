@@ -12,7 +12,9 @@ cp -r zookeeper-3.4.8 /usr/local/BDM
 cd streaming-benchmarks-master/
 cp -r ./* /usr/local/BDM
 chown -R se:se /usr/local/BDM
-apt-get -y install git maven curl
+apt-get -y install git 
+apt-get -y install maven 
+apt-get -y install curl
 cd /usr/local/BDM
 git init ./
 rm pom.xml
