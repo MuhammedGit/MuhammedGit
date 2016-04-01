@@ -3,7 +3,12 @@
 cd ~/Downloads
 wget https://github.com/yahoo/streaming-benchmarks/archive/master.zip
 wget http://ftp.itu.edu.tr/Mirror/Apache/zookeeper/zookeeper-3.4.8/zookeeper-3.4.8.tar.gz
-
+wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+chmod a+x lein
+mv lein /usr/bin
+cd /usr/bin
+lein
+cd ~/Downloads
 unzip master.zip
 tar xzf zookeeper-3.4.8.tar.gz
 
@@ -23,7 +28,7 @@ cp stream-bench.sh stream-bench_copy.sh
 rm stream-bench.sh
 wget https://raw.githubusercontent.com/MuhammedGit/MuhammedGithub/Muho/Benchmark/stream-bench.sh
 chmod a+x stream-bench.sh
-cp -r /usr/local/hadoop/ ./
+#cp -r /usr/local/hadoop/ ./
 chown -R se:se /usr/local/BDM
 ./stream-bench.sh SETUP
 cd kafka_2.10-0.8.2.1/config/
