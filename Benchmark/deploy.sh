@@ -41,7 +41,7 @@ cp storm_env.ini storm_env1.ini
 rm storm.yaml
 rm storm_env.ini
 wget https://raw.githubusercontent.com/MuhammedGit/MuhammedGithub/Muho/Benchmark/conf/storm/storm.yaml
-wget https://github.com/MuhammedGit/MuhammedGithub/blob/Muho/Benchmark/conf/storm/storm_env.ini
+wget https://raw.githubusercontent.com/MuhammedGit/MuhammedGithub/Muho/Benchmark/conf/storm/storm_env.ini
 cd /usr/local/BDM/conf/
 cp localConf.yaml localConf1.yaml
 rm localConf.yaml
@@ -49,6 +49,7 @@ wget https://raw.githubusercontent.com/MuhammedGit/MuhammedGithub/Muho/Benchmark
 cd /usr/local/BDM/zookeeper-3.4.8/conf/
 wget https://raw.githubusercontent.com/MuhammedGit/MuhammedGithub/Muho/Benchmark/conf/zookeeper/zoo.cfg
 chown -R se:se /usr/local/BDM
+mkdir /app
 mkdir /app/zookeeper
 mkdir /app/kafka-logs
 chown -R se:se /app
