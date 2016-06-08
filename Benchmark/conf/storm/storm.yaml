@@ -19,12 +19,20 @@
 #     - "server1"
 #     - "server2"
 storm.zookeeper.servers:
-    - "172.16.231.20"
-    - "172.16.231.22"
+    - "172.16.231.28"
+    - "172.16.231.29"
+    - "172.16.231.35"
 nimbus.host: "master"
-# 
-# nimbus.host: "nimbus"
-
+storm.messaging.netty.max_wait_ms: 10000
+supervisor.slots.ports:
+    - 6706
+#    - 6707
+#drpc.childopts: "-Xmx2048m"
+supervisor.childopts: "-Xmx4096m"
+#supervisor.cpu.capacity: 800.0
+#worker.gc.childopts: "-Xmx1024m"
+worker.heap.memory.mb: 4096
+worker.childopts: "-Xmx4096m  -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=artifacts/heapdump"
 # 
 # 
 # ##### These may optionally be filled in:
