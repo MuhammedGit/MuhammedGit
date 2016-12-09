@@ -3,12 +3,12 @@
 cd ~/Downloads
 wget https://github.com/yahoo/streaming-benchmarks/archive/master.zip
 wget http://ftp.itu.edu.tr/Mirror/Apache/zookeeper/zookeeper-3.4.8/zookeeper-3.4.8.tar.gz
-#wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
-#chmod a+x lein
-#mv lein /usr/bin
-#cd /usr/bin
-#lein
-#cd ~/Downloads
+wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+chmod a+x lein
+mv lein /usr/bin
+cd /usr/bin
+lein
+cd ~/Downloads
 unzip master.zip
 tar xzf zookeeper-3.4.8.tar.gz
 
