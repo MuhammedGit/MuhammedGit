@@ -1,14 +1,13 @@
 #!/bin/bash
-MIRROR=http://www.gtlib.gatech.edu/pub/apache/hadoop/common/hadoop-1.1.1/
 VERSION=hadoop-2.7.1
-
-
-
-
+apt-get install python-software-properties
+add-apt-repository ppa:webupd8team/java
+apt-get update
+apt-get install oracle-java8-installer
+apt-get install ssh
 #download hadoop, untar, put in /usr/local
-
 cd ~/Downloads
-
+wget http://ftp.itu.edu.tr/Mirror/Apache/hadoop/common/hadoop-2.7.1/hadoop-2.7.1.tar.gz
 tar -xzf "$VERSION".tar.gz
 mv  $VERSION /usr/local
 
